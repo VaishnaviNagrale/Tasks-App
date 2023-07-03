@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "263621254655",
+    "project_id": "bloc-tasks-app",
+    "storage_bucket": "bloc-tasks-app.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:263621254655:android:62aca0096ea6305b3adbca",
+        "android_client_info": {
+          "package_name": "com.example.bloc_to_do_app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "263621254655-ppfr73ug0uemth314vdbaiaqcepmt1e5.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDVdmUFJ1Y2gxN291ph265jE4BzxUtdhq0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "263621254655-ppfr73ug0uemth314vdbaiaqcepmt1e5.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
