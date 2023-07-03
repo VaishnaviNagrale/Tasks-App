@@ -13,15 +13,15 @@ class RecycleBin extends StatelessWidget {
       builder: (context, state) {
         return Scaffold(
           appBar: AppBar(
-            title: Text('Recycle Bin'),
+            title:const Text('Recycle Bin'),
             actions: [
               PopupMenuButton(
                 itemBuilder: (context) => [
                   PopupMenuItem(
                     child: TextButton.icon(
                         onPressed: () {},
-                        icon: Icon(Icons.delete_forever),
-                        label: Text('Delete all tasks')),
+                        icon:const Icon(Icons.delete_forever),
+                        label:const Text('Delete all tasks')),
                     onTap: () =>
                         context.read<TasksBloc>().add(PermenentlyDeleteTask()),
                   ),
@@ -29,7 +29,7 @@ class RecycleBin extends StatelessWidget {
               ),
             ],
           ),
-          drawer: MyDrawer(),
+          drawer:const MyDrawer(),
           body: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [

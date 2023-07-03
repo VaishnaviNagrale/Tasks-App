@@ -35,7 +35,7 @@ class MyApp extends StatelessWidget {
             theme: state.switchValue
                 ? AppThemes.appThemeData[AppTheme.darkTheme]
                 : AppThemes.appThemeData[AppTheme.lightTheme],
-            home: TabsScreen(),
+            home:const TabsScreen(),
           );
         },
       ),

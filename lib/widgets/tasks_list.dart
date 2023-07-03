@@ -4,7 +4,7 @@ import 'tasks_list_tile.dart';
 
 class TasksList extends StatelessWidget {
   final List<Task> tasksList;
-  TasksList({
+  const TasksList({
     Key? key,
     required this.tasksList,
   }) : super(key: key);

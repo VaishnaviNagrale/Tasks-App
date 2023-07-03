@@ -4,7 +4,7 @@ import '../models/tasks_model.dart';
 import '../widgets/tasks_list.dart';
 
 class PendingTasksScreen extends StatelessWidget {
-  PendingTasksScreen({super.key});
+ const PendingTasksScreen({super.key});
 
   @override
   Widget build(BuildContext context) {

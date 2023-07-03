@@ -9,7 +9,7 @@ abstract class TasksEvent extends Equatable {
 
 class AddTask extends TasksEvent {
   final Task task;
-  AddTask({
+ const AddTask({
     required this.task,
   });
   @override
@@ -18,7 +18,7 @@ class AddTask extends TasksEvent {
 
 class UpdateTask extends TasksEvent {
   final Task task;
-  UpdateTask({
+const  UpdateTask({
     required this.task,
   });
   @override
@@ -27,7 +27,7 @@ class UpdateTask extends TasksEvent {
 
 class DeleteTask extends TasksEvent {
   final Task task;
-  DeleteTask({
+ const DeleteTask({
     required this.task,
   });
   @override
@@ -36,7 +36,7 @@ class DeleteTask extends TasksEvent {
 
 class RemovedTask extends TasksEvent {
   final Task task;
-  RemovedTask({
+ const RemovedTask({
     required this.task,
   });
   @override
@@ -45,7 +45,7 @@ class RemovedTask extends TasksEvent {
 
 class MarkFavoriteOrUnfavoriteTask extends TasksEvent {
   final Task task;
-  MarkFavoriteOrUnfavoriteTask({
+const  MarkFavoriteOrUnfavoriteTask({
     required this.task,
   });
   @override
@@ -55,7 +55,7 @@ class MarkFavoriteOrUnfavoriteTask extends TasksEvent {
 class EditTask extends TasksEvent {
   final Task oldTask;
   final Task newTask;
-  EditTask({
+ const EditTask({
     required this.oldTask,
     required this.newTask,
   });
@@ -63,7 +63,7 @@ class EditTask extends TasksEvent {
 
 class RestoreTask extends TasksEvent {
   final Task task;
-  RestoreTask({required this.task});
+ const RestoreTask({required this.task});
   @override
   List<Object> get props => [task];
 }

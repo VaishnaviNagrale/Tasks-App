@@ -2,7 +2,7 @@ part of 'switch_bloc.dart';
 
 class SwitchState extends Equatable {
   final bool switchValue;
-  SwitchState({required this.switchValue});
+ const SwitchState({required this.switchValue});
   @override
   List<Object> get props => [switchValue];
 
@@ -20,5 +20,5 @@ class SwitchState extends Equatable {
 }
 
 class SwitchInitial extends SwitchState {
-  SwitchInitial({required super.switchValue});
+ const SwitchInitial({required super.switchValue});
 }

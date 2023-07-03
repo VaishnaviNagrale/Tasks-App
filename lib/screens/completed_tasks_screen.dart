@@ -4,7 +4,7 @@ import '../models/tasks_model.dart';
 import '../widgets/tasks_list.dart';
 
 class CompletedTasksScreen extends StatelessWidget {
-  CompletedTasksScreen({super.key});
+ const CompletedTasksScreen({super.key});
 
   @override
   Widget build(BuildContext context) {

@@ -6,7 +6,7 @@ import 'package:flutter/material.dart';
 import '../widgets/add_tasks_bt_sheet.dart';
 
 class TabsScreen extends StatefulWidget {
-  TabsScreen({super.key});
+const  TabsScreen({super.key});
 
   @override
   State<TabsScreen> createState() => _TabsScreenState();
@@ -14,9 +14,9 @@ class TabsScreen extends StatefulWidget {
 
 class _TabsScreenState extends State<TabsScreen> {
   final List<Map<String, dynamic>> _pageDetails = [
-    {'pageName': PendingTasksScreen(), 'title': 'Pending Tasks'},
-    {'pageName': CompletedTasksScreen(), 'title': 'Completed Tasks'},
-    {'pageName': FavoriteTasksScreen(), 'title': 'Favorite Tasks'},
+    {'pageName':const PendingTasksScreen(), 'title': 'Pending Tasks'},
+    {'pageName':const CompletedTasksScreen(), 'title': 'Completed Tasks'},
+    {'pageName':const FavoriteTasksScreen(), 'title': 'Favorite Tasks'},
   ];
 
   var _seletedPageIndex = 0;
@@ -47,10 +47,10 @@ class _TabsScreenState extends State<TabsScreen> {
               onPressed: () {
                 _addTask(context);
               },
-              icon: Icon(Icons.add)),
+              icon:const Icon(Icons.add)),
         ],
       ),
-      drawer: MyDrawer(),
+      drawer:const MyDrawer(),
       body: _pageDetails[_seletedPageIndex]['pageName'],
       floatingActionButton: _seletedPageIndex == 0
           ? FloatingActionButton(
@@ -58,7 +58,7 @@ class _TabsScreenState extends State<TabsScreen> {
                 _addTask(context);
               },
               tooltip: 'Add Task',
-              child: Icon(Icons.add),
+              child:const Icon(Icons.add),
             )
           : null,
         

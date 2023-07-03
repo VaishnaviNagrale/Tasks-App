@@ -21,7 +21,7 @@ class _MyDrawerState extends State<MyDrawer> {
           children: [
             Container(
               width: double.infinity,
-              padding: EdgeInsets.symmetric(vertical: 14, horizontal: 20),
+              padding:const EdgeInsets.symmetric(vertical: 14, horizontal: 20),
               color: Colors.grey,
               child: Text(
                 'Task Drawer',
@@ -32,10 +32,10 @@ class _MyDrawerState extends State<MyDrawer> {
               builder: (context, state) {
                 return GestureDetector(
                   onTap: () => Navigator.pushReplacement(context,
-                      MaterialPageRoute(builder: (context) => TabsScreen())),
+                      MaterialPageRoute(builder: (context) =>const TabsScreen())),
                   child: ListTile(
-                    leading: Icon(Icons.folder_special),
-                    title: Text('My Tasks'),
+                    leading:const Icon(Icons.folder_special),
+                    title:const Text('My Tasks'),
                     trailing: Text(
                       '${state.pendingTasks.length} | ${state.completedTasks.length}',
                     ),
@@ -43,26 +43,26 @@ class _MyDrawerState extends State<MyDrawer> {
                 );
               },
             ),
-            Divider(),
+          const  Divider(),
             BlocBuilder<TasksBloc, TasksState>(
               builder: (context, state) {
                 return GestureDetector(
                   onTap: () => Navigator.pushReplacement(context,
-                      MaterialPageRoute(builder: (context) => RecycleBin())),
+                      MaterialPageRoute(builder: (context) =>const RecycleBin())),
                   child: ListTile(
-                    leading: Icon(Icons.delete),
-                    title: Text('Bin'),
+                    leading:const Icon(Icons.delete),
+                    title:const Text('Bin'),
                     trailing: Text('${state.removedTasks.length}'),
                   ),
                 );
               },
             ),
-            Divider(),
+           const Divider(),
             BlocBuilder<TasksBloc, TasksState>(
               builder: (context, state) {
                 return GestureDetector(
                   onTap: () => uploadFilesToFirebaseStorage(context),
-                  child: ListTile(
+                  child:const ListTile(
                     leading: Icon(Icons.upload_file),
                     title: Text('Upload Files'),
                   ),

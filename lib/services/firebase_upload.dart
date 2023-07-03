@@ -30,9 +30,9 @@ void uploadFilesToFirebaseStorage(BuildContext context) async {
   );
 
   // Print the download URLs
-  print('tasks_bloc.dart URL: $tasksBlocURL');
-  print('tasks_event.dart URL: $tasksEventURL');
-  print('tasks_state.dart URL: $tasksStateURL');
+  // print('tasks_bloc.dart URL: $tasksBlocURL');
+  // print('tasks_event.dart URL: $tasksEventURL');
+  // print('tasks_state.dart URL: $tasksStateURL');
 }
 
 class FirebaseStorageService {
@@ -46,7 +46,7 @@ class FirebaseStorageService {
       String downloadURL = await snapshot.ref.getDownloadURL();
       return downloadURL;
     } catch (e) {
-      print('Error uploading file: $e');
+     // print('Error uploading file: $e');
       return null;
     }
   }

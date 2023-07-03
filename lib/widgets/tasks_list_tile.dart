@@ -27,9 +27,9 @@ class TasksListTile extends StatelessWidget {
                 child: Row(
                   children: [
                     task.isFavorite == false
-                        ? Icon(Icons.star_border)
-                        : Icon(Icons.star),
-                    SizedBox(width: 5),
+                        ?const Icon(Icons.star_border)
+                        :const Icon(Icons.star),
+                   const SizedBox(width: 5),
                     Expanded(
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,

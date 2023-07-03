@@ -5,7 +5,7 @@ import '../blocx/bloc_exports.dart';
 
 class PopupMenuButtonWidget extends StatelessWidget {
   final Task task;
-  PopupMenuButtonWidget({
+ const PopupMenuButtonWidget({
     Key? key,
     required this.task,
   }) : super(key: key);
@@ -41,8 +41,8 @@ class PopupMenuButtonWidget extends StatelessWidget {
                       Navigator.pop(context);
                       _editTask(context);
                     },
-                    icon: Icon(Icons.edit),
-                    label: Text('Edit'),
+                    icon:const Icon(Icons.edit),
+                    label:const Text('Edit'),
                   ),
                   onTap: () => _editTask(context),
                 ),
@@ -54,11 +54,11 @@ class PopupMenuButtonWidget extends StatelessWidget {
                           .add(MarkFavoriteOrUnfavoriteTask(task: task));
                     },
                     icon: task.isFavorite == false
-                        ? Icon(Icons.bookmark_border)
-                        : Icon(Icons.bookmark),
+                        ?const Icon(Icons.bookmark_border)
+                        :const Icon(Icons.bookmark),
                     label: task.isFavorite == false
-                        ? Text('Add to \nbookmarks')
-                        : Text('Remove from \nbookmarks'),
+                        ?const Text('Add to \nbookmarks')
+                        :const Text('Remove from \nbookmarks'),
                   ),
                   onTap: () {
                     context
@@ -69,8 +69,8 @@ class PopupMenuButtonWidget extends StatelessWidget {
                 PopupMenuItem(
                   child: TextButton.icon(
                     onPressed: () => _removeOrDeleteTask(context, task),
-                    icon: Icon(Icons.delete),
-                    label: Text('Delete'),
+                    icon:const Icon(Icons.delete),
+                    label:const Text('Delete'),
                   ),
                   onTap: () => _removeOrDeleteTask(context, task),
                 ),
@@ -80,8 +80,8 @@ class PopupMenuButtonWidget extends StatelessWidget {
                   child: TextButton.icon(
                     onPressed: () =>
                         context.read<TasksBloc>().add(RestoreTask(task: task)),
-                    icon: Icon(Icons.restore_from_trash),
-                    label: Text('Restore'),
+                    icon:const Icon(Icons.restore_from_trash),
+                    label:const Text('Restore'),
                   ),
                   onTap: () =>
                       context.read<TasksBloc>().add(RestoreTask(task: task)),
@@ -90,8 +90,8 @@ class PopupMenuButtonWidget extends StatelessWidget {
                   child: TextButton.icon(
                     onPressed: () =>
                         context.read<TasksBloc>().add(DeleteTask(task: task)),
-                    icon: Icon(Icons.delete_forever),
-                    label: Text('Delete Forever'),
+                    icon:const Icon(Icons.delete_forever),
+                    label:const Text('Delete Forever'),
                   ),
                   onTap: () =>
                       context.read<TasksBloc>().add(DeleteTask(task: task)),
